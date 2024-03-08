@@ -1,10 +1,10 @@
-# Creación de una API REST con Slim Framework
+# Creación de una API REST con Slim Framework
 
-## Introducción
+## Introducción
 
 Slim es un micro framework PHP que nos permite crear aplicaciones web y APIs REST de forma rápida y sencilla. En este tutorial vamos a ver cómo crear una API REST con Slim Framework.
 
-## Instalación
+## Instalación
 
 Aquí usaremos una instalación con Docker Composer, pero también se puede instalar Slim Framework de forma manual. En nuestro caso, se crearán dos contenedores, uno para Slim y otro para Nginx. No usaremos las imágenes oficiales de PHP y Nginx, sino que crearemos nuestras propias imágenes con nuestras configuraciones. La configuración de Nginx se hará con un archivo de configuración (`default.conf`) personalizado. La configuración de Slim se hará mediante un archivo `Dockerfile`.
 
@@ -22,25 +22,25 @@ Usaremos la siguiente estructura de directorios:
     └── index.php
 ```
 
-### Dockerfile para Slim
+### Dockerfile para Slim
 
 <script src="https://gist.github.com/ualmtorres/807d30e835c4c749a83c164b36694cb7.js"></script>
 
 Almacenamos este archivo en la carpeta `php` de nuestro proyecto.
 
-### Archivo de configuración de Nginx
+### Archivo de configuración de Nginx
 
 <script src="https://gist.github.com/ualmtorres/cb4be3716b944bd3a841eff6fd8b654e.js"></script>
 
 Almacenamos este archivo en la carpeta `nginx` de nuestro proyecto.
 
-### Docker Compose
+### Docker Compose
 
 <script src="https://gist.github.com/ualmtorres/70c5a58d5d0b0bfed0bf87ee2d2df594.js"></script>
 
 Almacenamos este archivo en la raíz de nuestro proyecto.
 
-### Ejecución del entorno
+### Ejecución del entorno
 
 Para ejecutar nuestra aplicación, ejecutamos el siguiente comando:
 
@@ -60,7 +60,7 @@ Para instalar las dependencias del proyecto, ejecutamos el siguiente comando:
 docker-compose exec php composer install
 ```
 
-## Creación de una API REST
+#  Creación de una API REST
 
 Para crear una API REST con Slim, necesitamos un archivo `index.php` con el siguiente contenido:
 
